@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <!-- CND para lo iconos de Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body>
+    <!-- div para toda la pagina -->
+    <div>
+        <!-- Comienzo de Navbar  -->
+        <nav class="navbar bg-terciary">
+            <div class="container-fluid d-flex justify-content-between ">
+                <!--   PARTE IZQUIERDA DEL NAVBAR  -->
+                <div class="navbar-brand" href="#">
+                    <h3><i class="bi bi-instagram"> Instagram</i></h3>
+                </div>
+                <div>
+                    <!-- PARTE DERECHA DEL NAVBAR / MODAL Y DROPDOWN -->
+                    <div class="d-flex ">
+                        <!-- aqui empieza modal button-->
+                        <button type="button" class="btn btn-success me-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            Create a new post
+                        </button>
+                        <!-- aqui empieza complementos del modal -->
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Create a new post</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                        <!-- Comentario del modal -->
+                                        <div>
+                                            <p>Caption:</p>
+                                            <div class="form-floating">
+                                                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                                                <label for="floatingTextarea">Comments</label>
+                                            </div>
+                                        </div>
+                                            <!-- CODIGO PARA LOS ICONOS DEL MODAL -->
+                                        <div class="d-flex justify-content-start align-items-center">
+                                            <!-- icono de camara -->
+                                            <i class="bi bi-camera-fill p-2 m-2 rounded border px-3 fs-5"></i>
+                                            <!-- icono de location -->
+                                            <i class="bi bi-geo-alt-fill p-2 m-2 rounded border px-3 fs-5"></i>
+                                        </div>
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-success">Publish</button>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        <!-- aqui terminal modal -->
+                        
+                        <!-- aqui empieza el codigo del dropdown -->
+                        <div>
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="bi bi-gear-fill"></i>
+                                </button>
+                                <ul class="dropdown-menu">
+                                  <li><a class="dropdown-item" href="#">Profile</a></li>
+                                  <li><a class="dropdown-item" href="#">Accesibility</a></li>
+                                  <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+                                  
+                                  <hr><li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+
+                                </ul>
+                                
+
+                              </div>
+                        </div>
+                        <!-- DIV DE ARRIBA TERMINA EL DROPDOWN -->
+                    </div>
+                    <!-- espacio final para ajustar botones de la derecha navbar -->
+                </div>
+            </div>
+          </nav>
+          <!-- Finaliza NavBar -->
+
+          <!-- Comienzo del Navs & tabs -->
+          <!-- aqui empieza la grilla y la columna -->
+          <div class="d-flex flex-column align-items-center">
+            <ul class="nav nav-pills m-3" id="pills-tab" role="tablist">
+                <!-- aqui empieza la lista para los botones -->
+
+                <!-- BOTON GRILLA -->
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+                        <i class="bi bi-grid-3x3-gap-fill fs-4"></i>
+                    </button>
+                </li>
+                <!-- BOTON COLUMNA -->
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
+                        <i class="bi bi-app fs-3"></i>
+                    </button>
+                </li>
+                
+                <!-- Aqui empieza la funcionalidad de los botones GRILLA / COLUMNA -->
+              </ul>
+              <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+                    <!-- Aqui va ir la grilla / EMPIEZA EL GRID 3X3 -->
+                    <!-- Codigo base para gridding las imagenes 3X3 -->
+                    <div class="container-fluid text-center my">
+                        <!-- el row nos permite empezar el grid  -->
+                        <div class="row my-4">
+                            <!-- el column nos clasifica las lineas de codigo como una formacion de la grilla  -->
+                          <div class="col-4">
+                            <img src="https://picsum.photos/501/500" class="w-100" alt="">
+                          </div> 
+                          <div class="col-4">
+                            <img src="https://picsum.photos/500/502" class="w-100" alt="">
+                          </div>
+                          <div class="col-4">
+                            <img src="https://picsum.photos/503/500" class="w-100" alt="">
+                          </div>
+                        </div>
+                        <!-- arriba primera grilla  -->
+                        <div class="row my-4">
+                            <!-- el column nos clasifica las lineas de codigo como una formacion de la grilla  -->
+                          <div class="col-4">
+                            <img src="https://picsum.photos/500/501" class="w-100" alt="">
+                          </div>
+                          <div class="col-4">
+                            <img src="https://picsum.photos/502/500" class="w-100" alt="">
+                          </div>
+                          <div class="col-4">
+                            <img src="https://picsum.photos/500/503" class="w-100" alt="">
+                          </div>
+                        </div>
+                        <!-- arriba segunda grilla -->
+                        <div class="row my-4">
+                            <!-- el column nos clasifica las lineas de codigo como una formacion de la grilla  -->
+                          <div class="col-4">
+                            <img src="https://picsum.photos/501/501" class="w-100" alt="">
+                          </div>
+                          <div class="col-4">
+                            <img src="https://picsum.photos/502/502" class="w-100" alt="">
+                          </div>
+                          <div class="col-4">
+                            <img src="https://picsum.photos/503/503" class="w-100" alt="">
+                          </div>
+                        </div>
+                        <!-- arriba tercera grilla -->
+                        <div class="row my-4">
+                            <!-- el column nos clasifica las lineas de codigo como una formacion de la grilla  -->
+                          <div class="col-4">
+                            <img src="https://picsum.photos/503/501" class="w-100" alt="">
+                          </div>
+                          <div class="col-4">
+                            <img src="https://picsum.photos/502/501" class="w-100" alt="">
+                          </div>
+                          <div class="col-4">
+                            <img src="https://picsum.photos/501/499" class="w-100" alt="">
+                          </div>
+                        </div>
+                        <!-- arriba cuarta grilla -->
+                    </div>
+                    <!-- AQUI FINALIZA EL CODIGO GRID --> 
+                </div>
+
+                <!-- AQUI EMPIEZA LOS POSTS -->
+                        <!-- aqui va las columna / posts -->
+                        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+
+                            <!-- primer post/card  --> 
+                            <div class="card my-4">
+
+                                <!-- Cabezera del card -->
+                                <div class="card-header d-flex justify-content-between">
+                                    <h3>Crazy title</h3>
+                                    <h3>08/26</h3>
+                                </div>
+                                <!-- final de la cabezera -->
+
+                                <!-- Cuerpo del card -->
+                                <div class="card-body" style="width:100%; padding:0px;">
+                                    <img src="https://picsum.photos/900/600" alt="">
+                                </div>
+                                <!-- Final del cuerpo -->
+
+                                <!-- Footer del card -->
+                                <div class="card-footer">
+                                    <h4 class="fw-bolder">203 Likes</h4>
+                                    <h6>This is an example of a very good photo that you can post on instagram</h6>
+                                </div>
+                                <!-- Final del footer -->
+                            </div>
+                            <!-- Final del post/card -->
+
+                            <!-- Segundo post/card -->
+                            <div class="card my-4">
+
+                                <!-- Cabezera del card -->
+                                <div class="card-header d-flex justify-content-between">
+                                    <h3>Crazy title</h3>
+                                    <h3>08/26</h3>
+                                </div>
+                                <!-- final de la cabezera -->
+
+                                <!-- Cuerpo del card -->
+                                <div class="card-body" style="width:100%; padding:0px;">
+                                    <img src="https://picsum.photos/901/600" alt="">
+                                </div>
+                                <!-- Final del cuerpo -->
+
+                                <!-- Footer del card -->
+                                <div class="card-footer">
+                                    <h4 class="fw-bolder">203 Likes</h4>
+                                    <h6>This is an example of a very good photo that you can post on instagram</h6>
+                                </div>
+                                <!-- Final del footer -->
+                            </div>
+                            <!-- Final del post/card --> 
+
+                             <!-- Tercer post/card -->
+                            <div class="card my-4">
+
+                                <!-- Cabezera del card -->
+                                <div class="card-header d-flex justify-content-between">
+                                    <h3>Crazy title</h3>
+                                    <h3>08/26</h3>
+                                </div>
+                                <!-- final de la cabezera -->
+
+                                <!-- Cuerpo del card -->
+                                <div class="card-body" style="width:100%; padding:0px;">
+                                    <img src="https://picsum.photos/900/601" alt="">
+                                </div>
+                                <!-- Final del cuerpo -->
+
+                                <!-- Footer del card -->
+                                <div class="card-footer">
+                                    <h4 class="fw-bolder">203 Likes</h4>
+                                    <h6>This is an example of a very good photo that you can post on instagram</h6>
+                                </div>
+                                <!-- Final del footer -->
+                            </div>
+                            <!-- Final del post/card -->                         
+
+                            <!-- Cuarto post/card -->
+                            <div class="card my-4">
+
+                                <!-- Cabezera del card -->
+                                <div class="card-header d-flex justify-content-between">
+                                    <h3>Crazy title</h3>
+                                    <h3>08/26</h3>
+                                </div>
+                                <!-- final de la cabezera -->
+
+                                <!-- Cuerpo del card -->
+                                <div class="card-body" style="width:100%; padding:0px;">
+                                    <img src="https://picsum.photos/901/601" alt="">
+                                </div>
+                                <!-- Final del cuerpo -->
+
+                                <!-- Footer del card -->
+                                <div class="card-footer">
+                                    <h4 class="fw-bolder">203 Likes</h4>
+                                    <h6>This is an example of a very good photo that you can post on instagram</h6>
+                                </div>
+                                <!-- Final del footer -->
+                            </div>
+                            <!-- Final del post/card --> 
+
+                            <!-- Quinto post/card -->
+                            <div class="card my-4">
+
+                                <!-- Cabezera del card -->
+                                <div class="card-header d-flex justify-content-between">
+                                    <h3>Crazy title</h3>
+                                    <h3>08/26</h3>
+                                </div>
+                                <!-- final de la cabezera -->
+
+                                <!-- Cuerpo del card -->
+                                <div class="card-body" style="width:100%; padding:0px;">
+                                    <img src="https://picsum.photos/902/602" alt="">
+                                </div>
+                                <!-- Final del cuerpo -->
+
+                                <!-- Footer del card -->
+                                <div class="card-footer">
+                                    <h4 class="fw-bolder">203 Likes</h4>
+                                    <h6>This is an example of a very good photo that you can post on instagram</h6>
+                                </div>
+                                <!-- Final del footer -->
+                            </div>
+                            <!-- Final del post/card --> 
+
+                        </div>
+                    
+                <!-- AQUI termina el post -->
+              </div>
+          </div>
+          <!-- DIV de arriba finaliza el Navs & Tabs -->
+    </div>
+    <!-- div de arriba es el container final de toda la pagina -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
